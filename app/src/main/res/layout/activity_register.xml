@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logobbi" />
+
+    <TextView
+        android:id="@+id/loginTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textSize="20dp"
+        android:textColor="@color/blue_700"
+        android:textStyle="bold"
+        android:layout_below="@id/logo"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        />
+
+
+        <com.example.billboardinsight.custom.CustomNameEditText
+            android:id="@+id/name_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:drawablePadding="12dp"
+            android:includeFontPadding="false"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_below="@id/loginTittle"
+            />
+
+        <com.example.billboardinsight.custom.CustomEmailEditText
+            android:id="@+id/email_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:drawablePadding="12dp"
+            android:includeFontPadding="false"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_below="@id/name_custom"
+            />
+        <com.example.billboardinsight.custom.CustomPasswordEditText
+            android:id="@+id/password_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:drawablePadding="12dp"
+            android:includeFontPadding="false"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_below="@id/email_custom"
+            />
+
+    <com.example.billboardinsight.custom.CustomButtonLogin
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:drawablePadding="12dp"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@id/password_custom"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/socialIcons"
+        android:layout_centerHorizontal="true"
+        android:text="@string/or"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/socialIcons"
+        >
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/facebook"
+            />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"
+            />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/github"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

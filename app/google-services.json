@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29684856871",
+    "project_id": "billboardinsight-fe4cc",
+    "storage_bucket": "billboardinsight-fe4cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29684856871:android:10bf4fb0fa542dc820f602",
+        "android_client_info": {
+          "package_name": "com.example.billboardinsight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29684856871-rbt4ki2k6ihps28lho1s5rnjoj6n9omg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc9uXno4gFQPus6Ih4bGus8wW5npwJ5wg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29684856871-9bag3807fjkmlsuoqqvajls0l5bsbrm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

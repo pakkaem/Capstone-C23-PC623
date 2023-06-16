@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_200">#F06292</color>
+    <color name="light_red">#E6625D</color>
+    <color name="blue_700">#F16C67</color>
+    <color name="red_200">#F06292</color>
+    <color name="red_700">#E6625D</color>
+    <color name="line_btn">#F16C67</color>
+    <color name="red">#CA0B00</color>
+    <color name="gray">#EFEFEF</color>
+    <color name="light_black">#5D5D5D</color>
+
+
+</resources>
