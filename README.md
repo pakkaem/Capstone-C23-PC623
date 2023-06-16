@@ -7,5 +7,6 @@ What's currently done?
  75% of Home
  Login/Register
  View vidio but because the ML don't finsihed yet so i decide to using vidio
+ we have problem in login because we have error in API 
 
  Firebase login
