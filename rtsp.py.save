@@ -1,0 +1,55 @@
+import cv2
+import subprocess as sp
+
+# Open the video capture device
+cap = cv2.VideoCapture('test1.mp4')
+
+# Set the video dimensions
+fwidth = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+fheight = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+ffmpeg_path = 'usr/bin/ffmpeg'
+
+# Create the FFmpeg pipe
+rtsp_url = "rtsp://127.0.0.1:8554/stream"
+command = [ffmpeg_path,
+           '-y',
+           '-f', 'rawvideo',
+           '-vcodec', 'rawvideo',
+           '-s', '{}x{}'.format(fwidth, fheight),
+           '-pix_fmt', 'bgr24',
+           '-r', '30',
+           '-i', '-',
+           '-c:v', 'libx264',
+           '-pix_fmt', 'yuv420p',
+           '-preset', 'ultrafast',
+           '-f', 'rtsp',
+           rtsp_url]
+
+pipe = sp.Popen(command, stdin=sp.PIPE)
+
+# Loop over frames from the video capture device
+while True:
+    # Read a frame from the video capture device
+    ret, frame = cap.read()
+
+    if ret:
+        # Write the frame to the FFmpeg pipe
+        pipe.stdin.write(frame.tostring())
+
+        # Display the frame
+        cv2.imshow('frame', frame)
+
+        # Exit if 'q' is pressed
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    else:
+        break
+
+# Release the video capture device and close the FFmpeg pipe
+cap.release()
+pipe.stdin.close()
+pipe.wait()
+
+# Close all windows
+cv2.destroyAllWindows()
